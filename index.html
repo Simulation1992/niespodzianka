@@ -152,6 +152,32 @@
   #headline span{color:var(--red);display:block;}
   body.revealed #headline{opacity:1;transform:none;}
 
+  #signed{
+    max-width:30ch;
+    margin:0;
+    text-align:center;
+    font-weight:500;
+    font-size:clamp(.9rem, 3.8vw, 1.1rem);
+    line-height:1.5;
+    letter-spacing:.05em;
+    color:var(--smoke-dim);
+    text-wrap:balance;
+    opacity:0;
+    transform:translateY(10px);
+    transition:opacity .5s ease .55s, transform .5s ease .55s;
+  }
+  #signed .from{
+    display:block;
+    font-size:.68rem;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--red);
+    margin-bottom:6px;
+  }
+  #signed b{color:var(--smoke);font-weight:700;}
+  #signed .sep{color:var(--red);margin:0 .4em;opacity:.8;}
+  body.revealed #signed{opacity:1;transform:none;}
+
   #again{
     appearance:none;
     border:1.5px solid rgba(232,226,224,.35);
@@ -226,6 +252,8 @@
   <div id="hint"><span class="dot"></span><span id="hint-text">Kliknij w młodego Racioka, żeby otworzyć prezent</span></div>
 
   <h1 id="headline">Sto lat<span>Byku!</span></h1>
+
+  <p id="signed"><span class="from">Od</span><b>Andrzej</b><span class="sep">•</span><b>Gusia</b><span class="sep">•</span><b>Domi</b><span class="sep">•</span><b>Kamil</b><span class="sep">•</span><b>Maja</b><span class="sep">•</span><b>Kazik</b><span class="sep">•</span><b>Grzesiek</b><span class="sep">•</span><b>Ania</b><span class="sep">•</span><b>Hania</b><span class="sep">•</span><b>Kondziu</b><span class="sep">•</span><b>Adam</b></p>
 
   <button id="again" type="button">Zapakuj z powrotem</button>
 </div>
