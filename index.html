@@ -301,7 +301,7 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- confetti ---------- */
-  var COLORS = ['#e01b24','#ffffff','#f2c14e','#9c0f16','#e8e2e0','#111111'];
+  var COLORS = ['#ffffff','#1f5fd0','#e01b24','#eaf1fb','#0f3d96','#ff4b52'];
   var pieces = [];
   var raf = null;
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -377,10 +377,11 @@
 
   /* ---------- balony ---------- */
   var BALLOON_COLORS = [
+    ['#ffffff','#c9d4e4'],
+    ['#3d84e8','#0f3d96'],
     ['#ff4b52','#c1131a'],
-    ['#ffffff','#c9c2c0'],
-    ['#2a2426','#000000'],
-    ['#f2c14e','#c48f16']
+    ['#f2f7ff','#b9c6da'],
+    ['#2f6fd8','#12327a']
   ];
   function balloons(n){
     if(reduced) return;
