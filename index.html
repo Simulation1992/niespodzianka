@@ -153,15 +153,9 @@
   body.revealed #headline{opacity:1;transform:none;}
 
   #signed{
-    max-width:30ch;
+    max-width:32ch;
     margin:0;
     text-align:center;
-    font-weight:500;
-    font-size:clamp(.9rem, 3.8vw, 1.1rem);
-    line-height:1.5;
-    letter-spacing:.05em;
-    color:var(--smoke-dim);
-    text-wrap:balance;
     opacity:0;
     transform:translateY(10px);
     transition:opacity .5s ease .55s, transform .5s ease .55s;
@@ -172,12 +166,44 @@
     letter-spacing:.3em;
     text-transform:uppercase;
     color:var(--red);
-    margin-bottom:6px;
+    margin-bottom:8px;
   }
-  #signed b{color:var(--smoke);font-weight:700;}
-  #signed .sep{color:var(--red);margin:0 .4em;opacity:.8;}
+  #signed .names{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:baseline;
+    column-gap:.5em;
+    row-gap:4px;
+    font-weight:700;
+    font-size:clamp(.95rem, 4.2vw, 1.15rem);
+    letter-spacing:.06em;
+    color:var(--smoke);
+  }
+  #signed .n{white-space:nowrap;}
+  #signed .n:not(:last-child)::after{
+    content:"•";
+    margin-left:.5em;
+    color:var(--red);
+    font-weight:500;
+    opacity:.75;
+  }
   body.revealed #signed{opacity:1;transform:none;}
 
+  #fineprint{
+    max-width:36ch;
+    margin:0;
+    text-align:center;
+    font-size:.72rem;
+    line-height:1.5;
+    letter-spacing:.04em;
+    color:var(--smoke-dim);
+    text-wrap:balance;
+    opacity:0;
+    transition:opacity .5s ease .75s;
+  }
+  #fineprint strong{color:var(--smoke);font-weight:700;}
+  body.revealed #fineprint{opacity:.9;}
   #again{
     appearance:none;
     border:1.5px solid rgba(232,226,224,.35);
@@ -253,9 +279,11 @@
 
   <h1 id="headline">Sto lat<span>Byku!</span></h1>
 
-  <p id="signed"><span class="from">Od</span><b>Andrzej</b><span class="sep">•</span><b>Gusia</b><span class="sep">•</span><b>Domi</b><span class="sep">•</span><b>Kamil</b><span class="sep">•</span><b>Maja</b><span class="sep">•</span><b>Kazik</b><span class="sep">•</span><b>Grzesiek</b><span class="sep">•</span><b>Ania</b><span class="sep">•</span><b>Hania</b><span class="sep">•</span><b>Kondziu</b><span class="sep">•</span><b>Adam</b></p>
+  <p id="signed"><span class="from">Od</span><span class="names"><span class="n">Andrzej</span><span class="n">Gusia</span><span class="n">Domi</span><span class="n">Kamil</span><span class="n">Maja</span><span class="n">Kazik</span><span class="n">Grzesiek</span><span class="n">Ania</span><span class="n">Hania</span><span class="n">Kondziu</span><span class="n">Adam</span></span></p>
 
   <button id="again" type="button">Zapakuj z powrotem</button>
+
+  <p id="fineprint">Koszulka w preorderze — do odbioru <strong>26.10.2026</strong> w sklepie Górnika na stadionie.</p>
 </div>
 
 <div id="balloons"></div>
